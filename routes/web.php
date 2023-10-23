@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CalcController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +14,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+
+
+// CalcControllerのcalcメソッドを呼び出す
+Route::get('calcs/{num1}/{operation}/{num2}', [CalcController::class, 'result']);
