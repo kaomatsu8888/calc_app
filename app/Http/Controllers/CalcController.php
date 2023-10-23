@@ -20,17 +20,17 @@ class CalcController extends Controller
                 $result = $num1 * $num2;
                 break;
             case 'division':    // 割り算
-                $result = $num1 / $num2;
+                // 0での除算を防ぐ
+                if ($num2 != 0) {
+                    $result = $num1 / $num2;
+                } else {
+                    return "エラー: 0で除算はできません。";
+                }
                 break;
             default:
-                $result = 0;
-                break;
+                return "エラー: 未知の操作です。";
         }
-        return view('message.calc', [
-            'num1' => $num1,
-            'operation' => $operation,
-            'num2' => $num2,
-            'result' => $result
-        ]);
+        // 結果を返す
+        return view('message.calc', ['result' => $result]);
     }
 }

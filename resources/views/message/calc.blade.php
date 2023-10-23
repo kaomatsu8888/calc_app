@@ -1,11 +1,11 @@
-<!DOCTYPE html>    <!-- この行はHTML5の宣言 -->
-<html lang="ja">    <!-- この行は日本語のページであることを表す -->
-<head>  <!-- ここからHTMLのヘッダ情報を記述する -->
+<!DOCTYPE html>
+<html lang="ja">
+<head>
     <meta charset="UTF-8">
-    <title>計算アプリ</title>   <!-- ページのタイトル -->
-</head> <!-- ここまでHTMLのヘッダ情報を記述する -->
-<body>      <!-- ここからHTMLの本文を記述する -->
-    <h1>計算アプリ</h1>  <!-- 計算結果を表示する -->
-    <p>{{ $result }}</p>    <!-- 計算結果を表示する -->
-</body>    <!-- ここまでHTMLの本文を記述する -->
-</html>   <!-- ここまでHTMLのページを記述する -->
+    <title>計算アプリ</title>
+</head>
+<body>
+    <h1>計算アプリ</h1>
+    <p>{{ $result }}</p>
+</body>
+</html>
